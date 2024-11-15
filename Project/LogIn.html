@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi | Log In / Register</title>
+    <link rel="stylesheet" href="Style.css">
+    <style>
+        body{
+            background-color: #DBC89E;
+            background-image: url(Pictures/sushi\ background3.jpg);
+            background-size: 45vh;
+            font-family: Arial, sans-serif;
+        }
+        .Rbody{
+            margin-top:7%;
+        }
+        .nav{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        } 
+        
+        .opaque{opacity: 1 !important;
+            transition: opacity 0.3s ease;}
+        .invinsible{opacity: 0 !important;
+            transition: opacity 0.3s ease;}
+        
+    </style>
+</head>
+<body>
+    <div id="Ldiv">Log In</div>
+    <div id="Rdiv">Register</div>
+    <div class="LRDiv">
+        <div class="LogIn RBox">
+            <div class="LHead">
+                <h1 style="opacity:100%">Register</h1>
+            </div>
+            <div class="LBody Rbody">
+                <Form>
+                    <label for="RUsername">UserName:</label>
+                    <br>
+                    <input type="text" name="RUsername" class="inputbar">
+                    <br>
+                    <label for="REmail">Email:</label>
+                    <br>
+                    <input type="text" name="REmail" class="inputbar">
+                    <br>
+                    <label for="RPass">Password:</label>
+                    <br>
+                    <input type="password" name="RPass" class="inputbar">
+                    <br>
+                    <label for="RRPass">Repeat Password:</label>
+                    <br>
+                    <input type="password" name="RRPass" class="inputbar">
+                    <br>
+                    <input type="submit" name="LSubmit" value="Register" class="LSubmit">
+                    <br>
+                    <hr>
+                    <h5>Or</h5>
+                    <br>
+                    <button class="google-btn RGoogle">
+                        <img src="https://img.icons8.com/color/24/000000/google-logo.png" alt="Google Logo">
+                        Register with Google
+                    </button>
+                </Form>
+            </div>
+        </div>
+        <div class="LogIn LBox">
+            <div class="LHead">
+                <h1>Log In</h1>
+            </div>
+            <div class="LBody">
+                <Form>
+                    <label for="LUsername">UserName/Email:</label>
+                    <br>
+                    <input type="text" name="LUsername" class="inputbar">
+                    <br>
+                    <label for="LPass">Password:</label>
+                    <br>
+                    <input type="password" name="LPass" class="inputbar">
+                    <br>
+                    <input type="submit" name="LSubmit" value="Log In"  class="LSubmit">
+                    <br>
+                    <hr>
+                    <h5>Or</h5>
+                    <br>
+                    <button class="google-btn LGoogle">
+                    <img src="https://img.icons8.com/color/24/000000/google-logo.png" alt="Google Logo">
+                    Log In with Google
+                    </button>
+                </Form>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+       
+        <ul>
+            
+            <li ><a href="project.html" title="Home Page">Sushi.Corner</a></li>
+            <li><a href="project.html#Knowledge"> Knowledge</a></li>
+            <li><a href="Restaurants.html" title="Sushi History"> Restaurants</a></li>
+            
+            
+            <li style="float: right; background-color: black; margin: 0px; " ><a href="LogIn.html" style=" color: whitesmoke; border-left: 1px solid #9D6B46;"> Log In </a></li>
+             
+        </ul>
+        <br>
+       
+
+    </div>
+
+    
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const RBox = document.querySelector('.RBox');
+            const LBox = document.querySelector('.LBox');
+            const Rdiv = document.getElementById('Rdiv');
+            const Ldiv = document.getElementById('Ldiv');
+
+            RBox.addEventListener('click', function() {
+                RBox.classList.add('opaque');
+                RBox.classList.remove('invinsible');
+                LBox.classList.add('invinsible');
+                RBox.style.visibility = 'visible';
+                LBox.style.visibility = 'hidden';
+                LBox.classList.remove('opaque');
+                LBox.classList.add('invinsible');
+                Ldiv.style.display =  'flex';
+                Rdiv.style.display = 'none';
+            });
+            Rdiv.addEventListener('click', function() {
+                RBox.classList.add('opaque');
+                RBox.classList.remove('invinsible');
+                LBox.classList.add('invinsible');
+                RBox.style.visibility = 'visible';
+                LBox.style.visibility = 'hidden';
+                LBox.classList.remove('opaque');
+                LBox.classList.add('invinsible');
+                Ldiv.style.display =  'flex';
+                Rdiv.style.display = 'none';
+            });
+            LBox.addEventListener('click', function() {
+                LBox.classList.add('opaque');
+                LBox.classList.remove('invinsible');
+                LBox.style.visibility = 'visible';
+                RBox.style.visibility = 'hidden';
+                RBox.classList.remove('opaque');
+                RBox.classList.add('invinsible');
+                Rdiv.style.display =  'flex';
+                Ldiv.style.display = 'none';
+            });
+            Ldiv.addEventListener('click', function() {
+                LBox.classList.add('opaque');
+                LBox.classList.remove('invinsible');
+                LBox.style.visibility = 'visible';
+                RBox.style.visibility = 'hidden';
+                RBox.classList.remove('opaque');
+                RBox.classList.add('invinsible');
+                Rdiv.style.display =  'flex';
+                Ldiv.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
